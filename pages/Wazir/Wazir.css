@@ -7,6 +7,12 @@
     animation: flash 1s infinite;
 }
 
+button {
+    border-radius: 5px;
+}
+
+
+
 @keyframes fadeInShrink {
     0% {
         opacity: 0;

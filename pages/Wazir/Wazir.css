@@ -11,6 +11,24 @@ button {
     border-radius: 5px;
 }
 
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+    z-index: 999;
+}
+
+.back-button:hover {
+    background-color: #388e3c;
+}
 
 
 @keyframes fadeInShrink {

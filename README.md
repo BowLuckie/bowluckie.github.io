@@ -33,6 +33,6 @@ cd bowluckie.github.io
 
 ## 👤 Author
 
-Created by BowLuckie
+Created solely by BowLuckie
 
 

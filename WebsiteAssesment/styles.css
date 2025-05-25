@@ -1,0 +1,112 @@
+:root {
+    --customblue: #7da7d9;
+}
+
+body {
+    background-color: #665bfd;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.Banner {
+    width: 100%;
+    background-color: var(--customblue) ;
+    padding: 10px;
+    margin-left: -10px;
+    margin-top: -10px;
+
+}
+.title{
+    font-size: 80px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    background-color: var(--customblue) ;
+    font-family: 'Arial', sans-serif;
+    padding: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-top: 5px solid lightblue;
+}
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--customblue) ;
+    padding: 10px;
+    border-top: 5px solid lightblue;
+    border-bottom: 1px solid lightblue;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    color: lightblue;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+}
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 15px;
+    transition: background-color 0.3s ease;
+}
+.navbar a:hover {
+    background-color: white;
+    color: var(--customblue) ;
+    border-radius: 5px;
+}
+
+.selected {
+    font-weight: bold;
+    color: var(--customblue);
+    background-color: lightblue;
+    border: 2px solid var(--customblue);
+    border-radius: 5px;
+    padding: 5px 15px;
+}
+.content {
+    display: inline-block;
+    padding: 20px;
+    background-color: var(--customblue);
+    border-radius: 5px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: auto;
+    max-width: 75%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+.content h2 {
+    font-size: 40px;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+.content p {
+    font-size: 20px;
+    color: white;
+    line-height: 1.2;
+    text-align: justify;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+.clearfix {
+    overflow: hidden;
+}
+
+.drumkit-img {
+    float: right;
+    margin: 10px;
+    width: 200px;
+    height: auto;
+    border-radius: 20px;
+}

@@ -34,7 +34,6 @@ body {
     background-color: var(--customblue) ;
     padding: 10px;
     border-top: 5px solid lightblue;
-    border-bottom: 1px solid lightblue;
     font-family: 'Arial', sans-serif;
     font-size: 18px;
     color: lightblue;
@@ -104,6 +103,36 @@ body {
 }
 
 .drumkit-img {
+    float: right;
+    margin: 10px;
+    width: 300px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.drumkit-img-left {
+    float: left;
+    margin: 10px;
+    width: 300px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.drumkit-img-bigger {
+    float: right;
+    margin: 10px;
+    width: 400px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.img-border {
+    border: 5px solid #665bfd;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.eloy-casagrande img {
     float: right;
     margin: 10px;
     width: 300px;

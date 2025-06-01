@@ -90,6 +90,15 @@ body {
     text-align: center;
     font-family: 'Arial', sans-serif;
 }
+
+.content h3 {
+    font-size: 30px;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
 .content p {
     font-size: 20px;
     color: white;

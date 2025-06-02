@@ -88,7 +88,16 @@ body {
     display: block;
     margin: 0 auto;
     border-radius: 20px;
+    transition: 
+        transform 0.3s cubic-bezier(.4,0,.2,1),
+        box-shadow 0.3s cubic-bezier(.4,0,.2,1);
+    will-change: transform;
 }
+
+.content img:hover {
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+}
+
 .content h2 {
     font-size: 40px;
     color: white;
@@ -124,6 +133,7 @@ body {
     width: 300px;
     height: auto;
     border-radius: 20px;
+    border: 5px solid #665bfd;
 }
 
 .drumkit-img-left {
@@ -132,6 +142,7 @@ body {
     width: 300px;
     height: auto;
     border-radius: 20px;
+    border: 5px solid #7da7d9;
 }
 
 .drumkit-img-bigger {
@@ -140,10 +151,11 @@ body {
     width: 400px;
     height: auto;
     border-radius: 20px;
+    border: 5px solid #7da7d9;
 }
 
 .img-border {
-    border: 5px solid #665bfd;
+    border: 5px solid #665bfd;;
     border-radius: 20px;
     padding: 0px;
 }
@@ -179,8 +191,8 @@ body {
     margin-bottom: 10px;
     text-align: center;
     font-family: 'Arial', sans-serif;
-    clear: both; /* Add this line */
-    width: 100%;  /* Optional: ensures full width */
+    clear: both;
+    width: 100%;
 }
 
 .Meinl-Byzance img {
@@ -379,7 +391,6 @@ transform: translateY(-6px) scale(1.03);
     margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
-    /* ensures it's centered under the image */
     background-image: linear-gradient(135deg, #7ea8e0 60%, #665bfd 100%);
     background-size: 200% 100%;
     background-position: left;
@@ -395,7 +406,7 @@ transform: translateY(-6px) scale(1.03);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
 }
 
-/* Responsive: stack on small screens */
+
 @media (max-width: 900px) {
     .drumkit-sidebox {
         float: none;
@@ -454,4 +465,25 @@ transform: translateY(-6px) scale(1.03);
     margin: 30px auto 0 auto;
     width: 90%;
     max-width: 420px;
+}
+
+/* Remove or comment out the old hover rule */
+/*
+.content img:hover {
+    transform: scale(1.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+*/
+
+/* Add this for tilt effect */
+.tilt-hover {
+    transition: 
+        transform 0.3s cubic-bezier(.4,0,.2,1),
+        box-shadow 0.3s cubic-bezier(.4,0,.2,1);
+    will-change: transform;
+}
+
+.tilt-hover:hover {
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
 }

@@ -1,11 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
-    
-    VanillaTilt.init(document.querySelectorAll(".img-border"), {
-        max: 25,
-        speed: 300,
-        glare: false,
-        scale: 1.02,
-        easing: "cubic-bezier(.03,.98,.52,.99)",
+    // Custom tilt for all .img-border elements
+    document.querySelectorAll('.img-border').forEach(function (tiltEl) {
+        let mouseMoveHandler = function (e) {
+            const rect = tiltEl.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const maxTilt = 25;
+            const tiltX = ((y - centerY) / centerY) * maxTilt;
+            const tiltY = ((x - centerX) / centerX) * maxTilt;
+            const scale = 1.35;
+            tiltEl.style.transform = `perspective(600px) rotateX(${-tiltX}deg) rotateY(${tiltY}deg) scale(${scale})`;
+        };
+        let resetHandler = function () {
+            tiltEl.style.transform = 'perspective(600px) rotateX(0deg) rotateY(0deg) scale(1)';
+        };
+        tiltEl.addEventListener('mousemove', mouseMoveHandler);
+        tiltEl.addEventListener('mouseleave', resetHandler);
+        tiltEl.addEventListener('mouseenter', function () {
+            tiltEl.style.transition = 'transform 0.2s cubic-bezier(.03,.98,.52,.99)';
+        });
     });
 
 
@@ -30,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
         el.setAttribute('data-aos-easing', 'ease-out-cubic');
     });
 
-    
+
     AOS.init({
         once: false,
         duration: 700,

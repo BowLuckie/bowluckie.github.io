@@ -9,43 +9,54 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    
-    document.querySelectorAll('.Power-Ride-Alpha, .Meinl-HCS, .Paiste\\ RUDE, .Meinl-Byzance, .Zildjan\\ K\\ Custom').forEach(el => {
+    const bodyClass = document.body.className;
+    if (
+        bodyClass.includes('reviews') ||
+        bodyClass.includes('recommendations') ||
+        window.location.pathname.includes('reviews.html') ||
+        window.location.pathname.includes('recommendations.html')
+    ) {
+        document.querySelectorAll('.content > *').forEach(el => {
+            el.setAttribute('data-aos', 'fade-up');
+            el.setAttribute('data-aos-duration', '700');
+            el.setAttribute('data-aos-easing', 'ease-out-cubic');
+        });
+    }
+
+    // Optionally, apply to all .content > * on all pages for consistency
+    document.querySelectorAll('.content > *').forEach(el => {
         el.setAttribute('data-aos', 'fade-up');
+        el.setAttribute('data-aos-duration', '700');
+        el.setAttribute('data-aos-easing', 'ease-out-cubic');
     });
-    
-    document.querySelectorAll('.eloy-casagrande, .mike-portnoy, .Danny-Carrey, .Neal-Peart').forEach(el => {
-        el.setAttribute('data-aos', 'fade-up');
-    });
-    
-    document.querySelectorAll('.video-card').forEach(el => {
-        el.setAttribute('data-aos', 'fade-up');
-    });
-    
-    // Animate all description <p> tags within .content.recommendations
-    document.querySelectorAll('.content.recommendations p').forEach(el => {
-        el.setAttribute('data-aos', 'fade-up');
-    });
-    
-    // Animate all h2, h3, img, and p elements inside .content blocks on all pages
-    document.querySelectorAll('.content h2, .content h3, .content img, .content p').forEach(el => {
-        el.setAttribute('data-aos', 'fade-up');
-    });
-    
-    AOS.init();
 
     
-    const backToTopBtn = document.getElementById('backToTopBtn');
+    AOS.init({
+        once: false,
+        duration: 700,
+        easing: 'ease-out-cubic',
+    });
+
+    const backToTopBtn = document.getElementById("backToTopBtn");
     if (backToTopBtn) {
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 200) {
-                backToTopBtn.style.display = 'block';
-            } else {
-                backToTopBtn.style.display = 'none';
-            }
+        backToTopBtn.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
         });
-        backToTopBtn.onclick = function() {
-            window.scrollTo({top: 0, behavior: 'smooth'});
-        };
     }
+
+    const fadetime = 0.4;
+    window.addEventListener("scroll", function () {
+        if (backToTopBtn) {
+            if (window.scrollY > 200) {
+                backToTopBtn.style.transition = `opacity ${fadetime}s`;
+                backToTopBtn.style.opacity = "1";
+            } else {
+                backToTopBtn.style.transition = `opacity ${fadetime}s`;
+                backToTopBtn.style.opacity = "0";
+            }
+        }
+    });
 });

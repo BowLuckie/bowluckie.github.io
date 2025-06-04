@@ -85,14 +85,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    /* Ensure .content always wraps all children, including floats */
     min-height: 0;
     height: auto;
-    /* Remove all overflow rules so images are never clipped */
     overflow: unset;
 }
 
-/* Clear floats inside .content to ensure it wraps floated children */
 .content::after {
     content: "";
     display: table;
@@ -101,7 +98,6 @@ body {
 
 .content > *:not(.img-border):not(.gradient-border) {
     flex-shrink: 0;
-    /* Remove overflow: hidden so wrappers never clip images */
     overflow: unset;
 }
 
@@ -109,9 +105,7 @@ body {
 .gradient-border {
     position: relative;
     z-index: 2;
-    /* Allow images to pop out */
     pointer-events: auto;
-    /* Remove overflow rules from image wrappers */
     overflow: unset;
 }
 
@@ -119,12 +113,10 @@ body {
 .gradient-border.popping-out {
     position: absolute;
     z-index: 100;
-    /* Let the image pop out above all content when hovered/tilted */
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    /* Optional: add a smooth transition for popping effect */
     transition: box-shadow 0.3s, transform 0.3s, z-index 0s;
 }
 

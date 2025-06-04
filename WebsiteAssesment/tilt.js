@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Custom tilt for all .img-border elements
     document.querySelectorAll('.img-border').forEach(function (tiltEl) {
         let mouseMoveHandler = function (e) {
             const rect = tiltEl.getBoundingClientRect();
@@ -38,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Optionally, apply to all .content > * on all pages for consistency
+    
     document.querySelectorAll('.content > *').forEach(el => {
         el.setAttribute('data-aos', 'fade-up');
         el.setAttribute('data-aos-duration', '700');

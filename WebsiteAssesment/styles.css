@@ -220,7 +220,7 @@ body {
 .eloy-casagrande img {
     float: right;
     margin: 10px;
-    width: 300px;
+    width: 400px;
     height: auto;
     border-radius: 20px;
 }
@@ -236,9 +236,11 @@ body {
 .Meinl-HCS img {
     float: left;
     margin: 10px;
-    width: 200px;
-    height: 200px;
+    width: 290px;
+    height: auto;
     border-radius: 20px;
+    padding: 10px;
+    background-color: white;
 }
 
 .recommendations h3 {
@@ -653,5 +655,10 @@ body {
 .Meinl-Byzance {
     overflow: unset;
     position: relative;
-    /* Allow images inside to pop out for tilt/hover */
 }
+
+.recommendations p,
+.reviews p {
+    font-size: 24px;
+}
+

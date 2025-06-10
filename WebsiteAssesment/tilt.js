@@ -24,18 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     const bodyClass = document.body.className;
-    if (
-        bodyClass.includes('reviews') ||
-        bodyClass.includes('recommendations') ||
-        window.location.pathname.includes('reviews.html') ||
-        window.location.pathname.includes('recommendations.html')
-    ) {
-        document.querySelectorAll('.content > *').forEach(el => {
-            el.setAttribute('data-aos', 'fade-up');
-            el.setAttribute('data-aos-duration', '700');
-            el.setAttribute('data-aos-easing', 'ease-out-cubic');
-        });
-    }
+
 
     
     document.querySelectorAll('.content > *').forEach(el => {

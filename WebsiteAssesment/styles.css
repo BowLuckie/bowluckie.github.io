@@ -18,6 +18,8 @@ body {
 
 }
 
+
+
 .title {
     font-size: 80px;
     font-weight: bold;
@@ -347,17 +349,21 @@ body {
 
 .video-cards-row {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     gap: 32px;
     justify-content: center;
     align-items: stretch;
-    margin: 0 auto;
     width: 100%;
     box-sizing: border-box;
     margin: 20px auto;
 }
 
 .video-card {
+    flex: 1 1 340px;
+    max-width: 400px;
+    min-width: 320px;
+    margin: 0;
     background: #7da7d9;
     border-radius: 20px;
     box-shadow: 0 4px 24px 0 rgba(31, 38, 135, 0.15);
@@ -505,7 +511,7 @@ body {
 
 @media (max-width: 1000px) {
     .video-cards-row {
-        flex-direction: column;
+        flex-direction: row;
         gap: 18px;
         align-items: center;
     }

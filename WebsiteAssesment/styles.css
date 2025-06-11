@@ -3,7 +3,7 @@
 }
 
 body {
-    background: linear-gradient(180deg, #6195d4 60%, #776ef6 100%);
+    background: linear-gradient(180deg, #6195d4 50%, #776ef6 100%);
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
@@ -130,6 +130,7 @@ body {
         transform 0.3s cubic-bezier(.4, 0, .2, 1),
         box-shadow 0.3s cubic-bezier(.4, 0, .2, 1);
     will-change: transform;
+    box-shadow: 10px 10px 5px rgba(31, 38, 135, 0.25);
 }
 
 .content img:hover {
